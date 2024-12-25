@@ -9,6 +9,7 @@ ORDER BY player_id;
 # 2. Partition By clause
 
 SELECT DISTINCT player_id, MIN(event_date) OVER (PARTITION BY player_id) AS first_login
+FROM Activity;
 
 # 3. Using Rank Function
 
